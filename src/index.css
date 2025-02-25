@@ -1,0 +1,58 @@
+.card {
+    border: 1px solid rgb(74, 70, 70);
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
+    padding: 20px;
+    margin: 5px;
+    text-align: center;
+    max-width: 150px;
+    display: inline-block;
+}
+
+.search_cards {
+    text-align: center;
+    border: 1px solid rgb(74, 70, 70);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.search_cards .SearchBar {
+    text-align: left;
+    display: inline;
+    width: 300px;
+    height: 30px;
+}
+
+
+.card_area {
+    text-align: center;
+}
+
+.card .cardImg {
+    max-width: 150px;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 10px;
+
+}
+
+.card .card_title {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    color: brown;
+}
+
+.card .card_desc {
+    font-family: 'Times New Roman', Times, serif;
+    color: rgba(0, 0, 0, 0.246);
+}
+
+.head .header_text {
+    text-align: center;
+}
+
+ul li {
+    display: inline;
+    padding-left: 50px;
+}
