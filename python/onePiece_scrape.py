@@ -1,7 +1,8 @@
 import requests
-import database
+import  database
 import time
-from itertools import zip_longest
+import  database
+import  onePiece_scrape as scrape
 
 productID = "68"
 
@@ -31,7 +32,7 @@ def parseJSON(json_data):
         return []
 
 
-def getProductPrice(parsed_data) :
+def addProductPrice(parsed_data) :
     count = 0 
     for group in parsed_data:
         groupID = group.get("groupId")
@@ -65,20 +66,20 @@ def getProductPrice(parsed_data) :
                 print(dataStruct)
                 database.addtoDataBase(dataStruct)
 
-
-
 def main():
     # Fetch the data
-    json_data = getGroups()
+    json_data = scrape.getGroups()
     #create database
     database.createDataBase()
 
     if json_data:
-        parsed_data = parseJSON(json_data)
-        getProductPrice(parsed_data)
+        parsed_data = scrape.parseJSON(json_data)
+        scrape.addProductPrice(parsed_data)
 
     else:
         print("No data fetched from the server.")
 
 # Run the main function
 main()
+
+
