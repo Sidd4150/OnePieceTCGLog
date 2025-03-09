@@ -4,18 +4,69 @@
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
     padding: 20px;
     margin: 5px;
+    background-color: rgba(213, 193, 167, 0.9);
+
+
     transition: background-color 0.3s ease, transform 0.3s ease;
     text-align: center;
-    max-width: 150px;
+    width: 150px;
+    height: 300px;
     display: inline-block;
+    overflow: hidden;
+
+
+}
+
+.card_title {
+    max-height: 50px;
+    font-size: medium;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    color: brown;
+
 }
 
 .card:hover {
     background-color: lightcyan;
-
     transform: scale(1.05);
+}
+
+.card_area {
+    text-align: center;
+    background-image: url("/src/assets/background.png");
+    opacity: 95%;
+}
+
+.card.expanded {
+    width: 500px;
+    /* Full viewport width */
+    height: 500px;
+    /* Full viewport height */
+    position: fixed;
+    /* Fix it in place */
+    top: 50%;
+    /* Center vertically */
+    left: 50%;
+    /* Center horizontally */
+    transform: translate(-50%, -50%);
+    /* Truly center the card */
+    z-index: 10;
+    text-align: left;
+    /* Bring to the front */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: lightcyan;
+    /* Optional: You can adjust the background color when expanded */
+}
 
 
+
+
+
+.card .cardImg {
+    max-width: 150px;
+    height: auto;
+    border-radius: 5%;
+    margin-bottom: 10px;
 
 }
 
@@ -29,38 +80,46 @@
 
 .search_cards .SearchBar {
     text-align: left;
-    display: inline;
-    width: 300px;
-    height: 30px;
-}
-
-
-.card_area {
-    text-align: center;
-}
-
-.card .cardImg {
-    max-width: 150px;
-    height: auto;
-    border-radius: 5%;
-    margin-bottom: 10px;
+    display: inline-block;
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
 
 }
 
-.card .card_title {
-    font-family: 'Times New Roman', Times, serif;
-    margin: 0;
-    color: brown;
+.search_cards button {
+    width: 90%;
+    max-width: 100px;
+    padding: 12px 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #5b9bd5;
+
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+
 }
 
-.card .card_desc {
-    font-family: 'Times New Roman', Times, serif;
-    color: rgba(0, 0, 0, 0.246);
+.search_cards button:active {
+    background-color: #3d7bb9;
+    /* Darker blue when clicked */
+    transform: scale(0.98);
+    /* Slightly shrink the button for a press effect */
 }
 
-.head .header_text {
-    text-align: center;
-}
+
+
+
 
 ul li {
     display: inline;

@@ -52,6 +52,7 @@ def addProductPrice(parsed_data) :
                 img = group_product.get("imageUrl")
                 marketPrice = group_price.get("marketPrice")
                 
+                #TO-DO: To get more detailed Information about cards
                 extended = group_product.get("extendedData")
 
 

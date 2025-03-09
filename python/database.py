@@ -11,6 +11,8 @@ sql_schema = """
         );"""
 
 
+
+
 def addtoDataBase(data):
     try:
         with sqlite3.connect("cards.db") as conn:

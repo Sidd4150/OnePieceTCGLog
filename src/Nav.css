@@ -1,0 +1,57 @@
+.Nav {
+
+    /* Dark background color for the nav */
+    color: black;
+    /* White text color */
+    padding: 10px 20px;
+    /* Add some padding to the nav */
+}
+
+.Logo {
+    height: 50px;
+    width: auto;
+    border-radius: 10px;
+}
+
+.header_text {
+    font-size: 45px;
+    display: inline;
+}
+
+.Nav hr {
+    border: 0;
+    /* Remove the default border styling */
+    border-top: 1px solid #555;
+    /* Light separator line */
+    margin: 10px 0;
+    /* Add margin to space out the hr elements */
+}
+
+.pages {
+    text-align: right;
+    margin-right: 5%;
+}
+
+.Nav .pages li {
+
+    margin: 2.5%;
+    /* Space out the list items */
+}
+
+.Nav .pages li a {
+    color: Black;
+    /* White text for the links */
+    text-decoration: none;
+    /* Remove underline from links */
+    font-size: 18px;
+    /* Set a readable font size */
+    font-weight: 500;
+    /* Slightly bold text */
+    transition: color 0.3s ease;
+    /* Smooth transition for color change */
+}
+
+.Nav .pages li a:hover {
+    color: #5b9bd5;
+    /* Light blue color on hover */
+}
