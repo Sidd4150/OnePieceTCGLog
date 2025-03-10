@@ -2,13 +2,16 @@
 
     /* Dark background color for the nav */
     color: black;
+    text-align: center;
+    font-family: 'Rock Salt', cursive;
+    font-weight: 200px;
     /* White text color */
     padding: 10px 20px;
     /* Add some padding to the nav */
 }
 
 .Logo {
-    height: 50px;
+    height: 100px;
     width: auto;
     border-radius: 10px;
 }

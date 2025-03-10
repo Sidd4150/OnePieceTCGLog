@@ -1,5 +1,5 @@
 import sqlite3
-
+from fastapi.responses import JSONResponse
 sql_schema = """
        CREATE TABLE IF NOT EXISTS cards (
             id INTEGER PRIMARY KEY AUTOINCREMENT,  
@@ -10,8 +10,70 @@ sql_schema = """
             groupID INTEGER          
         );"""
 
+def filterDataBase(filter):
+    try:
+        with sqlite3.connect("cards.db") as conn:
+            cursor = conn.cursor()
+            if filter == "price":
+                sql = "SELECT * FROM cards ORDER BY price DESC"
+            elif filter == "setName":
+                sql = "SELECT * FROM cards ORDER BY setName DESC"
+            else:
+               sql = "SELECT * FROM cards"
+                
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            
+            cards = []
+            for row in rows:
+                card = {
+                    "id": row[0],
+                    "name": row[1],
+                    "img": row[2],
+                    "setName": row[3],
+                    "price": row[4],
+                    "groupID": row[5]
+                }
+                
+                cards.append(card)
 
+            return JSONResponse(content={"cards": cards})
+            
+    except sqlite3.Error as e:
+        print(e)
 
+def getCardsDataBase():
+    try:
+        with sqlite3.connect("cards.db") as conn:
+            cursor = conn.cursor()
+            cursor.execute("SELECT * FROM cards")
+            rows = cursor.fetchall()
+
+            if not rows:
+                print("No cards found in database.")
+            
+            cards = []
+            for row in rows:
+                card = {
+                    "id": row[0],
+                    "name": row[1],
+                    "img": row[2],
+                    "setName": row[3],
+                    "price": row[4],
+                    "groupID": row[5]
+                }
+                
+                cards.append(card)
+
+            return JSONResponse(content={"cards": cards})
+
+    except sqlite3.Error as e:
+        print(f"Database error: {e}")  # Log database errors
+        return JSONResponse(status_code=500, content={"message": f"Error fetching data: {e}"})
+
+    except Exception as e:
+        print(f"Unexpected error: {e}")  # Log other errors
+        return JSONResponse(status_code=500, content={"message": f"Unexpected error: {e}"})
 
 def addtoDataBase(data):
     try:

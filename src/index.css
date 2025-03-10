@@ -34,7 +34,9 @@
 .card_area {
     text-align: center;
     background-image: url("/src/assets/background.png");
-    opacity: 95%;
+    display: grid;
+    grid-template-columns: repeat(5, 15%);
+    justify-content: center;
 }
 
 .card.expanded {
@@ -59,7 +61,22 @@
 }
 
 
+.Filter {
 
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+    max-width: 100px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+
+}
 
 
 .card .cardImg {
