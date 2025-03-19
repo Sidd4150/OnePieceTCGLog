@@ -16,12 +16,22 @@ def filterDataBase(filter):
             cursor = conn.cursor()
             if filter == "price":
                 sql = "SELECT * FROM cards ORDER BY price DESC"
-            elif filter == "setName":
+                cursor.execute(sql)
+            elif filter == "priceASC":
+                sql = "SELECT * FROM cards ORDER BY price ASC"
+                cursor.execute(sql)
+            elif filter == "setNameDESC":
                 sql = "SELECT * FROM cards ORDER BY setName DESC"
+                cursor.execute(sql)
+            elif filter == "setNameASC":
+                sql = "SELECT * FROM cards ORDER BY setName ASC"
+                cursor.execute(sql)
             else:
-               sql = "SELECT * FROM cards"
+                print(f"Filter received: {filter}")  # This will show you what value is being passed
+                search_name = f"%{filter}%"  # Adding wildcards for partial matching
+                cursor.execute("SELECT * FROM cards WHERE name LIKE ?", (search_name,))
                 
-            cursor.execute(sql)
+            
             rows = cursor.fetchall()
             
             cards = []

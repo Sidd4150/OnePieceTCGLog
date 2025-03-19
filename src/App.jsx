@@ -10,7 +10,7 @@ export default function App() {
   const [loading, setLoading] = useState(true); // State for loading status
 
   useEffect(() => {
-    fetch("http://localhost:8000/api/cards") // Update with your backend URL
+    fetch("https://onepiecetcglog-production.up.railway.app/api/cards") // Update with your backend URL
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Access the 'cards' property of the response
@@ -25,7 +25,7 @@ export default function App() {
     setLoading(true); // Set loading true to show loading state while fetching filtered data
 
     // Send the selected filter to the backend as a query parameter
-    fetch(`http://localhost:8000/api/filter?filter=${selectedFilter}`)
+    fetch(`https://onepiecetcglog-production.up.railway.app/api/filter?filter=${selectedFilter}`)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Update the cards with the filtered data
@@ -40,7 +40,7 @@ export default function App() {
     setLoading(true); // Set loading true to show loading state while fetching filtered data
 
     // Send the selected filter to the backend as a query parameter
-    fetch(`http://localhost:8000/api/search?filter=${searchTerm}`)
+    fetch(`https://onepiecetcglog-production.up.railway.app/api/search?filter=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Update the cards with the filtered data
@@ -56,17 +56,27 @@ export default function App() {
 
   return (
     <>
-      <Header />
-      <Nav />
-      <Search onFilterChange={handleFilterChange} onSearch={handleSearch} />
-      <div className="card_area">
-        {cards.length > 0 ? (
-          cards.map((card, index) => (
-            <Card key={index} img={card.img} name={card.name} price={card.price} />
-          ))
-        ) : (
-          <p>No cards available</p> // Display this if no cards are in the database
-        )}
+      <div className="background" >
+
+        <Nav />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Search onFilterChange={handleFilterChange} onSearch={handleSearch} />
+        <br />
+        <br />
+        <br />
+        <br />
+        <div className="card_area">
+          {cards.length > 0 ? (
+            cards.map((card, index) => (
+              <Card key={index} img={card.img} name={card.name} price={card.price} />
+            ))
+          ) : (
+            <p>No cards available</p> // Display this if no cards are in the database
+          )}
+        </div>
       </div>
     </>
   );

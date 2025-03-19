@@ -34,6 +34,10 @@ async def get_data(data: DataInput):
 async def filter_cards(filter: str = None):
     return database.filterDataBase(filter)
 
+@app.get("/api/search")
+async def filter_cards(filter: str = None):
+    return database.filterDataBase(filter)
+
 @app.get("/api/cards")
 async def get_cards():
    return database.getCardsDataBase()

@@ -31,9 +31,18 @@
     transform: scale(1.05);
 }
 
+.background {
+    background-image: url("/src/assets/background.png");
+    background-attachment: fixed;
+
+    background-size: 50%;
+
+    background-position: center;
+}
+
 .card_area {
     text-align: center;
-    background-image: url("/src/assets/background.png");
+
     display: grid;
     grid-template-columns: repeat(5, 15%);
     justify-content: center;

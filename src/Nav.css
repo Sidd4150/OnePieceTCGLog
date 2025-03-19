@@ -1,44 +1,36 @@
 .Nav {
 
-    /* Dark background color for the nav */
+    background-color: white;
+
+    margin: 0;
     color: black;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 200px;
+    text-align: left;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 50px;
+    padding-bottom: 1px;
     /* White text color */
-    padding: 10px 20px;
+
     /* Add some padding to the nav */
 }
 
 .Logo {
-    height: 100px;
+    height: 90px;
     width: auto;
     border-radius: 10px;
 }
 
-.header_text {
-    font-size: 45px;
-    display: inline;
-}
 
-.Nav hr {
-    border: 0;
-    /* Remove the default border styling */
-    border-top: 1px solid #555;
-    /* Light separator line */
-    margin: 10px 0;
-    /* Add margin to space out the hr elements */
-}
+
 
 .pages {
     text-align: right;
-    margin-right: 5%;
+    padding-right: 100px;
 }
 
 .Nav .pages li {
 
     margin: 2.5%;
-    /* Space out the list items */
+
 }
 
 .Nav .pages li a {
@@ -46,7 +38,7 @@
     /* White text for the links */
     text-decoration: none;
     /* Remove underline from links */
-    font-size: 18px;
+    font-size: 15px;
     /* Set a readable font size */
     font-weight: 500;
     /* Slightly bold text */
