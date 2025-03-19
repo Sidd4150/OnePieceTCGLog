@@ -1,0 +1,49 @@
+.search_cards {
+    text-align: center;
+    border: 1px solid rgb(0, 0, 0);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
+    padding: 20px;
+    margin-bottom: 5px;
+}
+
+.search_cards .SearchBar {
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+    max-width: 300px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #000000;
+    border-top: 0;
+    border-right: 0;
+    border-left: 0;
+
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
+
+}
+
+.search_cards button {
+    width: 90%;
+    max-width: 100px;
+    padding: 12px 15px;
+    border: 2px solid rgb(180, 175, 175);
+    border-radius: 8px;
+    background-color: #5b9bd5;
+
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+
+}
+
+.search_cards button:active {
+    background-color: #3d7bb9;
+    /* Darker blue when clicked */
+    transform: scale(0.98);
+    /* Slightly shrink the button for a press effect */
+}

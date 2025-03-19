@@ -36,6 +36,21 @@ export default function App() {
         setLoading(false); // Set loading to false even in case of an error
       });
   };
+  const handleSearch = (searchTerm) => {
+    setLoading(true); // Set loading true to show loading state while fetching filtered data
+
+    // Send the selected filter to the backend as a query parameter
+    fetch(`http://localhost:8000/api/search?filter=${searchTerm}`)
+      .then((response) => response.json())
+      .then((data) => {
+        setCards(data.cards); // Update the cards with the filtered data
+        setLoading(false); // Set loading to false once data is fetched
+      })
+      .catch((error) => {
+        console.error("Error fetching filtered cards:", error);
+        setLoading(false); // Set loading to false even in case of an error
+      });
+  };
 
 
 
@@ -43,7 +58,7 @@ export default function App() {
     <>
       <Header />
       <Nav />
-      <Search onFilterChange={handleFilterChange} />
+      <Search onFilterChange={handleFilterChange} onSearch={handleSearch} />
       <div className="card_area">
         {cards.length > 0 ? (
           cards.map((card, index) => (
