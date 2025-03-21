@@ -9,6 +9,7 @@ export default function Nav() {
                 <li> <a href="#">Home</a></li>
                 <li> <a href="#">About</a></li>
 
+
             </ul>
 
         </nav >
