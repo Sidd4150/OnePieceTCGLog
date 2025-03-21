@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./Header.jsx";
+
 import Card from "./Card.jsx";
 import Nav from "./Nav.jsx";
 import Search from "./Search.jsx";
