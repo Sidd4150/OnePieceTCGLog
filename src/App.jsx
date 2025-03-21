@@ -10,7 +10,7 @@ export default function App() {
   const [loading, setLoading] = useState(true); // State for loading status
 
   useEffect(() => {
-    fetch("https://onepiecetcglog-production.up.railway.app/api/cards") // Update with your backend URL
+    fetch("https://optcglogbackend-production.up.railway.app/api/cards") // Update with your backend URL
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Access the 'cards' property of the response
@@ -25,7 +25,7 @@ export default function App() {
     setLoading(true); // Set loading true to show loading state while fetching filtered data
 
     // Send the selected filter to the backend as a query parameter
-    fetch(`https://onepiecetcglog-production.up.railway.app/api/filter?filter=${selectedFilter}`)
+    fetch(`https://optcglogbackend-production.up.railway.app/api/filter?filter=${selectedFilter}`)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Update the cards with the filtered data
@@ -40,7 +40,7 @@ export default function App() {
     setLoading(true); // Set loading true to show loading state while fetching filtered data
 
     // Send the selected filter to the backend as a query parameter
-    fetch(`https://onepiecetcglog-production.up.railway.app/api/search?filter=${searchTerm}`)
+    fetch(`https://optcglogbackend-production.up.railway.app/api/search?filter=${searchTerm}`)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Update the cards with the filtered data
