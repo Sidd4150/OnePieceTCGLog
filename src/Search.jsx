@@ -24,6 +24,8 @@ function Search({ onFilterChange, onSearch }) {
                 value={searchTerm} // Bind input value to the searchTerm state
                 onChange={handleSearchChange} // Update searchTerm when input changes
             />
+
+
             <select className="Filter" onChange={handleSelectChange}>
                 <option value="">Filter</option>
                 <option value="price">Price Descending</option>
@@ -34,6 +36,9 @@ function Search({ onFilterChange, onSearch }) {
             </select>
             <br></br>
             <button onClick={handleSearchClick}>Search</button>
+
+
+
         </div>
     );
 }

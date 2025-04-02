@@ -5,9 +5,11 @@ export default function Nav() {
     return (
         <nav className="Nav" >
             <img className="Logo" src="/assets/newLogo.png" alt="Logo"></img>
+
             <ul className="pages">
-                <li> <a href="#">Home</a></li>
-                <li> <a href="#">About</a></li>
+                <li> <p className="Home" >Home</p></li>
+
+                <li> <p className="about" >About</p></li>
 
 
             </ul>

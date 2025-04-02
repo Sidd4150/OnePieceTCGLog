@@ -1,52 +1,62 @@
 .Nav {
 
-    background-color: white;
-
-    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
     color: black;
     text-align: left;
     font-family: 'DM Sans', sans-serif;
     font-weight: 50px;
     padding-bottom: 1px;
-    /* White text color */
+    background-color: white;
+    margin-bottom: 45px;
 
-    /* Add some padding to the nav */
 }
 
 .Logo {
-    height: 90px;
-    width: auto;
-    border-radius: 10px;
+    position: relative;
+    height: 8%;
+    width: 15%;
+    left: 10px;
 }
 
 
 
 
 .pages {
-    text-align: right;
+    display: inline-flex;
     padding-right: 100px;
 }
 
-.Nav .pages li {
 
-    margin: 2.5%;
+.Home {
+    color: black;
+}
+
+.about {
+    color: black;
 
 }
 
-.Nav .pages li a {
-    color: Black;
+.Nav .pages li p {
+
     /* White text for the links */
     text-decoration: none;
+
     /* Remove underline from links */
     font-size: 15px;
+    padding: 8px;
+
     /* Set a readable font size */
     font-weight: 500;
-    /* Slightly bold text */
+
     transition: color 0.3s ease;
-    /* Smooth transition for color change */
+
 }
 
-.Nav .pages li a:hover {
+.Nav .pages li p:hover {
     color: #5b9bd5;
+    cursor: pointer;
     /* Light blue color on hover */
 }

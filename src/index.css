@@ -1,10 +1,13 @@
 .card {
-    border: 1px solid rgb(74, 70, 70);
+    border: 1px solid rgb(59, 56, 56);
     border-radius: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
     padding: 20px;
     margin: 5px;
-    background-color: rgba(213, 193, 167, 0.9);
+
+    background: linear-gradient(to bottom,
+            rgb(168, 131, 84),
+            rgba(230, 210, 184));
 
 
     transition: background-color 0.3s ease, transform 0.3s ease;
@@ -15,6 +18,66 @@
     overflow: hidden;
 
 
+}
+
+.pagination_controls {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+span {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Nextbtn,
+.Prevbtn {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: 10px;
+    background-color: white;
+}
+
+.header_area {
+    background-image: url("src/assets/r.png");
+    background-position: center;
+    background-size: 100%;
+
+    position: relative;
+    /* Needed for overlaying the gradient */
+}
+
+
+.header_area::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+
+    /* Adjust height for desired fade area */
+    background: linear-gradient(to bottom,
+            rgba(120, 185, 193, 0),
+            /* Start with transparent blue */
+            rgba(120, 185, 193, 70)
+            /* Fade to a semi-transparent blue */
+        );
+
+    pointer-events: none;
+}
+
+.background {
+    background-color: rgba(120, 185, 193, 100);
+}
+
+.card_area {
+    text-align: center;
+
+    display: grid;
+    grid-template-columns: repeat(5, 15%);
+    justify-content: center;
 }
 
 .card_title {
@@ -31,22 +94,9 @@
     transform: scale(1.05);
 }
 
-.background {
-    background-image: url("/src/assets/background.png");
-    background-attachment: fixed;
 
-    background-size: 50%;
 
-    background-position: center;
-}
 
-.card_area {
-    text-align: center;
-
-    display: grid;
-    grid-template-columns: repeat(5, 15%);
-    justify-content: center;
-}
 
 .card.expanded {
     width: 500px;
@@ -61,35 +111,24 @@
     /* Center horizontally */
     transform: translate(-50%, -50%);
     /* Truly center the card */
+    background-image: 300px;
     z-index: 10;
     text-align: left;
     /* Bring to the front */
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
     background-color: lightcyan;
-    /* Optional: You can adjust the background color when expanded */
-}
 
-
-.Filter {
-
-    text-align: left;
-    display: inline-block;
-    width: 90%;
-    max-width: 100px;
-    padding: 12px 15px;
-    margin-bottom: 15px;
-    border: 2px solid #ccc;
-    border-radius: 8px;
-    background-color: #f9f9f9;
-    font-size: 16px;
-    color: #333;
-    transition: all 0.3s ease;
+    .cardImg {
+        height: 60%;
+        width: auto;
+    }
 
 }
+
 
 
 .card .cardImg {
-    max-width: 150px;
+    width: 150px;
     height: auto;
     border-radius: 5%;
     margin-bottom: 10px;

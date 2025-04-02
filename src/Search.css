@@ -2,9 +2,9 @@
     text-align: center;
     align-self: center;
     margin-left: 23%;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.138);
+
     padding: 40px;
-    background-color: white;
+
     width: 50%;
     margin-bottom: 5px;
 }
@@ -16,11 +16,10 @@
     max-width: 300px;
     padding: 12px 15px;
     margin-bottom: 15px;
-    border: 2px solid #000000;
-    border-top: 0;
-    border-right: 0;
-    border-left: 0;
 
+
+
+    border-radius: 50px;
     background-color: #f9f9f9;
     font-size: 16px;
     color: #333;
@@ -33,7 +32,8 @@
     max-width: 200px;
     padding: 5px 15px;
     border: 0;
-    border-radius: 8px;
+
+    border-radius: 50px;
     background-color: #5b9bd5;
     align-self: center;
     color: white;
@@ -41,6 +41,28 @@
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
+}
+
+
+.Filter {
+
+    text-align: left;
+    display: inline-block;
+    width: 90%;
+    max-width: 100px;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 2px solid #ccc;
+    border-radius: 50px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    transition: all 0.3s ease;
 
 }
 
