@@ -23,7 +23,7 @@ export default function App() {
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Access the 'cards' property of the response
-        setLoading(false); // Set loading to false once data is fetched
+        setLoading(false); // 
       });
   }, []);
 

@@ -40,7 +40,7 @@ span {
 }
 
 .header_area {
-    background-image: url("src/assets/r.png");
+    background-image: url("/assets/r.png");
     background-position: center;
     background-size: 100%;
 
