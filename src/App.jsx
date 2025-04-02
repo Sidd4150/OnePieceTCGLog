@@ -19,7 +19,7 @@ export default function App() {
   const currentCards = cards.slice(startIndex, startIndex + cardsPerPage);
 
   useEffect(() => {
-    fetch(`${url}/api/cards`) // Update with your backend URL
+    fetch(`${url}/api/cards`)
       .then((response) => response.json())
       .then((data) => {
         setCards(data.cards); // Access the 'cards' property of the response

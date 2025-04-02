@@ -40,4 +40,5 @@ async def filter_cards(filter: str = None):
 
 @app.get("/api/cards")
 async def get_cards():
+   database.createDataBase()
    return database.getCardsDataBase()
